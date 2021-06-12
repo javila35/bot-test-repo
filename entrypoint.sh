@@ -17,7 +17,7 @@ _main() {
 }
 
 _switch_to_repository() {
-	cd .
+	cd "."
 }
 
 _switch_to_branch() {
