@@ -5,13 +5,19 @@
 set -eu
 
 _main() {
-		_switch_to_branch
+	_switch_to_repository
 
-		_add_files
+	_switch_to_branch
 
-		_local_commit
+	_add_files
 
-		_push_to_github
+	_local_commit
+
+	_push_to_github
+}
+
+_switch_to_repository() {
+	"cd ."
 }
 
 _switch_to_branch() {
@@ -22,8 +28,9 @@ _switch_to_branch() {
 
 _add_files() {
 	echo "Adding files";
+
 	# # shellcheck disable=SC2086
-    git add .
+    "git add ."
 }
 
 _local_commit() {
