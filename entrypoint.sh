@@ -33,7 +33,7 @@ _local_commit() {
 
 _push_to_github() {
 	echo "push to github";
-	"git push -u origin ${{ github.head_ref }}"
+	"git push -u origin $INPUT_BRANCH"
 }
 
 _main
