@@ -5,8 +5,6 @@
 set -eu
 
 _main() {
-	_print_dir
-	
 	_switch_to_repository
 
 	_switch_to_branch
@@ -16,12 +14,6 @@ _main() {
 	_local_commit
 
 	_push_to_github
-}
-
-_print_dir() {
-	echo "in print dir"
-	# shellcheck disable=SC2086
-	ls
 }
 
 _switch_to_repository() {
@@ -55,4 +47,14 @@ _push_to_github() {
 	"git push -u origin $INPUT_BRANCH"
 }
 
-_main
+_print_dir() {
+	echo "print working directory"
+	pwd
+	echo "list files"
+	ls
+	echo "changing dir"
+	cd .
+	pwd
+}
+
+_print_dir
