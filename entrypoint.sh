@@ -16,8 +16,8 @@ _main() {
 
 _switch_to_branch() {
 	echo "Checking out new branch";
-	BRANCH=${{ github.head_ref }};
-	"git checkout -b $BRANCH";
+	echo "INPUT_BRANCH value: $INPUT_BRANCH";
+	git checkout -b $INPUT_BRANCH
 }
 
 _add_files() {

@@ -3,6 +3,12 @@ description: Allows automatic commits from a forked repo branch to a base repo
 
 author: Joseph Avila <joeavilacodes@gmail.com>
 
+inputs:
+  branch:
+    description: The new branch from the fork to be pushed to upstream repo
+    required: false
+    default: ${{ github.head_ref }}
+
 runs:
   using: node12
   main: index.js
