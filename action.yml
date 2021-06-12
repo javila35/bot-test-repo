@@ -1,0 +1,7 @@
+name: CVP Auto Commit Test
+description: Allows automatic commits from a forked repo branch to a base repo
+
+author: Joseph Avila <joeavilacodes@gmail.com>
+
+inputs:
+  
