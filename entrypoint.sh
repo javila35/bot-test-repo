@@ -20,16 +20,19 @@ _main() {
 
 _print_dir() {
 	echo "in print dir"
+	# shellcheck disable=SC2086
 	ls
 }
 
 _switch_to_repository() {
-	cd "."
+	# shellcheck disable=SC2086
+	cd .
 }
 
 _switch_to_branch() {
 	echo "Checking out new branch";
 	echo "INPUT_BRANCH value: $INPUT_BRANCH";
+	# shellcheck disable=SC2086
 	git checkout -b $INPUT_BRANCH
 }
 
@@ -37,16 +40,18 @@ _add_files() {
 	echo "Adding files";
 
 	# # shellcheck disable=SC2086
-    "git add ."
+	git add .
 }
 
 _local_commit() {
-    git commit -m "Commit made by prettier";
+	# shellcheck disable=SC2086
+	git commit -m "Commit made by prettier";
 }
 
 
 _push_to_github() {
 	echo "push to github";
+	
 	"git push -u origin $INPUT_BRANCH"
 }
 
