@@ -5,6 +5,8 @@
 set -eu
 
 _main() {
+	_print_dir
+	
 	_switch_to_repository
 
 	_switch_to_branch
@@ -14,6 +16,11 @@ _main() {
 	_local_commit
 
 	_push_to_github
+}
+
+_print_dir() {
+	echo "in print dir"
+	ls
 }
 
 _switch_to_repository() {
