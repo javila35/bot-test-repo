@@ -55,6 +55,12 @@ _print_dir() {
 	echo "changing dir"
 	cd .
 	pwd
+	_git_status
+}
+
+_git_status() {
+	echo "print git status"
+	git status
 }
 
 _print_dir
